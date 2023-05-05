@@ -14,4 +14,4 @@ EXPOSE 5000
 
 VOLUME ["/app-data"]
 
-CMD ["python3", "main.py"]
+CMD ["sleep", "infinity"]
