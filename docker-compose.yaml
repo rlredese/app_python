@@ -5,5 +5,5 @@ services:
     image: app-python:1.0
     ports:
       - 5000:5000
-    commad:
+    command:
       - "cd /opt/app && python3 main.py"
