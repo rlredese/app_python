@@ -6,4 +6,4 @@ services:
     ports:
       - 5000:5000
     command:
-      - "sleep infinity"
+      - "python3 --verion && ls /opt/"
