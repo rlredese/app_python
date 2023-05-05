@@ -8,6 +8,6 @@ WORKDIR /opt/app
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get install --upgrade -y python3.6 apt-get install python3-pip
+RUN apt-get install --upgrade -y python3.6 python3-pip
 
 ENV APP_ENV development
