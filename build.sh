@@ -7,5 +7,7 @@
 if $1 == "full"; then
     docker build -f Dockerfile.base -t debian-base:1.0
     docker build . -t app_python:1.0
+fi
 if $1 == "code";then
     docker build . -t app_python:1.0
+fi
