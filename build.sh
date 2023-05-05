@@ -8,7 +8,7 @@ VERSION=1.0
 IMAGE_BASE="debian-base:1.0"
 if [ $1 = "full" ] ; then
     echo "Iniciando o build da imagem base..."
-    docker build - -t debian-base:1.0 f Dockerfile.base
+    docker build -t debian-base:1.0 -f base-dockerfile/Dockerfile.base
     docker build . -t $IMAGE_NAME:$VERSION
 fi
 if [ $1 = "code" ];then
