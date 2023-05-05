@@ -3,7 +3,7 @@ services:
   app-py:
     container-name: app-py
     image: app-python:1.0
-    port:
+    ports:
       - 5000:5000
     commad:
       - "cd /opt/app && python3 main.py"
