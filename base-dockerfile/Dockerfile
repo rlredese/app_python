@@ -8,6 +8,6 @@ WORKDIR /opt/app
 
 RUN apt-get update && apt-get -y upgrade
 
-RUN apt-get install upgrade python
+RUN apt-get install --upgrade python
 
 ENV APP_ENV development
