@@ -8,7 +8,7 @@ COPY requeriments.txt /opt/app/
 
 WORKDIR /opt/app
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
 
 RUN pip3 install --no-cache-dir -r requeriments.txt
 
