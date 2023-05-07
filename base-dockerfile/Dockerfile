@@ -12,4 +12,3 @@ RUN apt-get install --upgrade -y python3.6 python3-pip git wget
 
 ENV APP_ENV development
 
-CMD ["python3", "main.py" ]
