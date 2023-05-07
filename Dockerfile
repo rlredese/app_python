@@ -12,6 +12,6 @@ ENV APP_ENV development
 
 EXPOSE 5000
 
-VOLUME ["/app-data"]
+
 
 
