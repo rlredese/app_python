@@ -33,4 +33,4 @@ spec:
     targetPort: 5000
   selector:
     app: flaskapp
-  type: LoadBalancer
+  type: ClusterIP
