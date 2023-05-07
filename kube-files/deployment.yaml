@@ -13,8 +13,8 @@ spec:
          app: app-service   
      spec: 
        containers: 
-         - name: app-service 
-           image: app-service 
+         - name: app-python 
+           image: app-python:1.0 
            imagePullPolicy: Never 
            ports: 
              - containerPort: 5000 
