@@ -1,21 +1,36 @@
-apiVersion: apps/v1 
-kind: Deployment 
-metadata: 
-   name: app-service 
-spec: 
-   replicas: 1 
-   selector: 
-     matchLabels: 
-       app: app-service 
-   template: 
-     metadata: 
-       labels: 
-         app: app-service   
-     spec: 
-       containers: 
-         - name: app-python 
-           image: app-python:1.0 
-           imagePullPolicy: Never 
-           ports: 
-             - containerPort: 5000 
-               protocol: TCP
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp-deployment
+  labels:
+    app: flaskapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+        - name: flaskapi
+          image: app-python:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+          
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-service
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: flaskapp
+  type: LoadBalancer
